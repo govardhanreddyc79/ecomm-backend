@@ -5,23 +5,34 @@ import { v4 as uuid } from "uuid";
  * You can add category of your wish with different attributes
  * */
 
-export const categories = [
+ export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    categoryName: "Bats",
+    imageSource:"/assets/images/bats.jpg",
+    imageAlt:"Bats",
+    link:"/ProductList"
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    categoryName: "Balls",
+    imageSource:"/assets/images/balls.jpg",
+    imageAlt:"Balls",
+    link:"/ProductList"
   },
   {
     _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    categoryName: "stumps",
+    imageSource:"/assets/images/stumps.jpg",
+    imageAlt:"Stumps",
+    link:"/ProductList"
+  },
+  {
+    _id: uuid(),
+    categoryName: "gloves",
+    imageSource:"/assets/images/gloves.jpg",
+    imageAlt:"Gloves",
+    link:"/ProductList"
   },
 ];
+
