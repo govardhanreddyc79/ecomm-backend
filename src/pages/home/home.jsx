@@ -12,11 +12,8 @@ const Home = () => {
         (async function () {
             try{
                 let category = await axios.get("/api/categories");
-                console.log(category)
                 setCategories(category.data.categories)
-            }catch (err) {
-                console.log(err)
-            }
+            }catch (err) {}
         })();
     },[])
 
@@ -28,15 +25,15 @@ const Home = () => {
         <main className="flex-column">
           <div className="category-cards">
             
-            { categories.map((category) => {
+            {/* { categories.map((item) => {
                 return(
-                    <CategoryCard category={category} />
+                    <CategoryCard category={item} />
                 )
-            })}
+            })}  */}
 
 
-              {/* <div className="category">
-                  <img className ="cat-image" src="./assets/images/bats.jpg" alt="Bats" />
+              <div className="category">
+                  <img className ="cat-image" src="../../assets/images/bats.jpg" alt="Bats" />
                   <a className = "cat-item" href="./ProductListing/productListing.html" target="_blank">Bats</a>
       
               </div>
@@ -56,7 +53,7 @@ const Home = () => {
                   <img className ="cat-image" src="./assets/images/gloves.jpeg" alt="Bats" />
                   <a className = "cat-item" href="./ProductListing/productListing.html" target="_blank">Gloves</a>
       
-              </div> */}
+              </div>
   
           </div>
           
