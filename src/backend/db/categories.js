@@ -1,4 +1,6 @@
 import { v4 as uuid } from "uuid";
+import {balls, bats,stumps,gloves} from "../../assets/images"
+
 
 /**
  * Category Database can be added here.
@@ -9,28 +11,28 @@ import { v4 as uuid } from "uuid";
   {
     _id: uuid(),
     categoryName: "Bats",
-    imageSource:"/assets/images/bats.jpg",
+    imageSource:bats,
     imageAlt:"Bats",
     link:"/ProductList"
   },
   {
     _id: uuid(),
     categoryName: "Balls",
-    imageSource:"/assets/images/balls.jpg",
+    imageSource:balls,
     imageAlt:"Balls",
     link:"/ProductList"
   },
   {
     _id: uuid(),
     categoryName: "stumps",
-    imageSource:"/assets/images/stumps.jpg",
+    imageSource:stumps,
     imageAlt:"Stumps",
     link:"/ProductList"
   },
   {
     _id: uuid(),
     categoryName: "gloves",
-    imageSource:"/assets/images/gloves.jpg",
+    imageSource:gloves,
     imageAlt:"Gloves",
     link:"/ProductList"
   },
