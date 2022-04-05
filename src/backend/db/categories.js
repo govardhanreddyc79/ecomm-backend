@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import {balls, bats,stumps,gloves} from "../../assets/images"
+import {balls, bats,stumps,gloves} from "assets/images"
 
 
 /**

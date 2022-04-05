@@ -1,10 +1,10 @@
-import { Navbar } from "../../components/navbar";
-import { CategoryCard } from "../../components/categoryCard";
+// import { Navbar } from "/components/navbar";
+import { Navbar, CategoryCard, NewDealsCard,  } from "components";
 import axios from "axios";
-import { sportsadda } from "../../assets/images";
+import { sportsadda } from "assets/images";
 import { useState, useEffect } from "react";
-import { newDeals } from "../../staticData";
-import { NewDealsCard } from "../../components/newDealsCard";
+import { newDeals } from "staticData";
+// import { NewDealsCard } from "/components/newDealsCard";
 
 
 
