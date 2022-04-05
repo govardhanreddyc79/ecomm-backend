@@ -8,7 +8,7 @@ import { newDeals } from "staticData";
 
 
 
-const Home = () => {
+export const Home = () => {
 
     const [ categories, setCategories] = useState([]);
 

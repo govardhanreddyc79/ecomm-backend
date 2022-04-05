@@ -1,6 +1,5 @@
 export const NewDealsCard = ({dealItem}) => {
     const {dealName, imageSource, imageAlt, link, discount} = dealItem
-    console.log(imageSource)
     return(
         <div className="new-arrivals">
         <img className ="deal-image" src={imageSource} alt={imageAlt}/>
