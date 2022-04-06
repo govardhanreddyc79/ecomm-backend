@@ -9,9 +9,10 @@ export const Products = () => {
         (async function () {
             try{
                 let productItems = await axios.get("/api/products");
-                console.log(productItems.data.products)
                 setProducts(productItems.data.products)
-            }catch (err) {}
+            }catch (err) {
+                console.log("error",err)
+            }
         })()
     }, [])
 
@@ -72,14 +73,12 @@ return(
 
             <div className="cards">
                 {
-                    products.map((product) => {
+                    products?.map((product) => {
                         return (
-                            <ProductCard key = {product._id} productItem={product}/>
+                            <ProductCard key = {product._id} productItem={product} />
                         )
                     })
                 }
-
-                <ProductCard />
 
             </div>
 
