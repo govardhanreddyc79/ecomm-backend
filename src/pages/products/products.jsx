@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { Navbar, ProductCard } from "components";
+import { useFilterReducer } from "context/filter-context";
 import axios from "axios";
 import  "./products.css"
 
 export const Products = () => {
     const [ products, setProducts] = useState([])
+
+    const { state, dispatch } = useFilterReducer();
+    const { sortBy } = state
 
     useEffect(() => {
         (async function () {
@@ -15,6 +19,22 @@ export const Products = () => {
             }
         })()
     }, [])
+
+
+    const sortedProductsByPrice = ( sortby, items) => {
+        if (sortby === "LOW_TO_HIGH")
+            return [...products].sort((item1, item2) => item1.price - item2.price);
+        if (sortby === 'HIGH_TO_LOW')
+            return [...products].sort((item1, item2) => item2.price - item1.price);
+        return products;
+
+
+    }
+    const sortedProducts = sortedProductsByPrice( sortBy, products)
+
+    
+
+    
 
 return(
     <div>
@@ -62,8 +82,26 @@ return(
                     <h3 className="margin-top">Sort By</h3>
                     <div className="flex-column">
                         
-                    <label><input type="radio" name="sort-by" />Price - Low to High</label>
-                    <label><input type="radio" name="sort-by" />Price - High to Low</label>
+                    <label>
+                        <input
+                         type="radio" 
+                         name="sort-by" 
+                         id="low-to-high"
+                         checked={sortBy === "LOW_TO_HIGH"}
+                         onChange = {() => dispatch({ type: "LOW_TO_HIGH" })}
+                         />
+                         Price - Low to High
+                         </label>
+                    <label>
+                        <input
+                        type="radio"
+                        name="sort-by" 
+                        id="high-to-low"
+                        checked={sortBy === "HIGH_TO_LOW"}
+                        onChange = {() => dispatch({ type: "HIGH_TO_LOW" })}
+                        />
+                        Price - High to Low
+                        </label>
 
                     </div>          
                     </aside>
@@ -71,7 +109,7 @@ return(
 
             <div className="cards">
                 {
-                    products?.map((product) => {
+                    sortedProducts?.map((product) => {
                         return (
                             <ProductCard key = {product._id} productItem={product} />
                         )
