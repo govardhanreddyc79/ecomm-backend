@@ -2,8 +2,8 @@ export const ProductCard = ({productItem}) => {
 
     const {productName, price, imageSource, imageAlt} = productItem
     return(
-        <div className="flex-coloumn product">
-        <div>
+        <div className="flex-coloumn product product-card">
+        <div className="product-image-div">
             <img className="wish-product-image" src={imageSource} alt={imageAlt} />
         </div>
         <div className="product-description"> 

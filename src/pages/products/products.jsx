@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, ProductCard } from "components";
 import axios from "axios";
+import  "./products.css"
 
 export const Products = () => {
     const [ products, setProducts] = useState([])
