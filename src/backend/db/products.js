@@ -16,7 +16,6 @@ export const products = [
     price:1800,
     rating:4,
     quantity:0,
-    link:"/ProductList"
   },
   {
     _id: uuid(),
@@ -27,7 +26,6 @@ export const products = [
     price:1200,
     rating:3,
     quantity:0,
-    link:"/ProductList"
   },
   {
     _id: uuid(),
@@ -38,7 +36,6 @@ export const products = [
     price:400,
     rating:4,
     quantity:0,
-    link:"/ProductList"
   },
   {
     _id: uuid(),
@@ -49,7 +46,6 @@ export const products = [
     price:800,
     rating:2,
     quantity:0,
-    link:"/ProductList"
   },
   {
     _id: uuid(),
@@ -60,7 +56,6 @@ export const products = [
     price:400,
     rating:3,
     quantity:0,
-    link:"/ProductList"
   },
   {
     _id: uuid(),
@@ -71,6 +66,5 @@ export const products = [
     price:700,
     rating:1,
     quantity:0,
-    link:"/ProductList"
   },
 ];
