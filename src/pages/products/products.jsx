@@ -11,7 +11,6 @@ export const Products = () => {
                 let productItems = await axios.get("/api/products");
                 setProducts(productItems.data.products)
             }catch (err) {
-                console.log("error",err)
             }
         })()
     }, [])
@@ -39,33 +38,31 @@ return(
                     <label htmlFor=""></label>
 
                     <h3 className="margin-top">Category</h3>
-                    <div>
-                        <input type="checkbox" name="Bats" />
-                        <label>Bats</label>
-                        <input type="checkbox" name="Balls" />
-                        <label>Balls</label>
-                        <input type="checkbox" name="Stumps" />
-                        <label>Stumps</label>
-                        <input type="checkbox" name="Gloves" />
-                        <label>Gloves</label>
+                    <div className="flex-column">
+                        <label><input type="checkbox" name="Bats" />Bats</label>
+                        
+                        <label><input type="checkbox" name="Balls" />Balls</label>
+                        
+                        <label><input type="checkbox" name="Stumps" />Stumps</label>
+                        
+                        <label><input type="checkbox" name="Gloves" />Gloves</label>
                     </div>
                     
                     <h3 className="margin-top">Rating</h3>
-                    <div>
-                        <input type="radio" name="rating" value="4" id="rating-4" />
-                    <label htmlFor="rating-4">4 star and above</label>
-                    <input type="radio" name="rating" value="3" id="rating-3" />
-                    <label htmlFor="rating-3">3 star and above</label>
-                    <input type="radio" name="rating" value="2" id="rating-2" />
-                    <label htmlFor="rating-2">2 star and above</label>
+                    <div className="flex-column">
+                        
+                    <label htmlFor="rating-4"><input type="radio" name="rating" value="4" id="rating-4" />4 star and above</label>
+                    
+                    <label htmlFor="rating-3"><input type="radio" name="rating" value="3" id="rating-3" />3 star and above</label>
+                    
+                    <label htmlFor="rating-2"><input type="radio" name="rating" value="2" id="rating-2" />2 star and above</label>
                     </div>
                     
                     <h3 className="margin-top">Sort By</h3>
-                    <div>
-                        <input type="radio" name="sort-by" />
-                    <label>Price - Low to High</label>
-                    <input type="radio" name="sort-by" />
-                    <label>Price - High to Low</label>
+                    <div className="flex-column">
+                        
+                    <label><input type="radio" name="sort-by" />Price - Low to High</label>
+                    <label><input type="radio" name="sort-by" />Price - High to Low</label>
 
                     </div>          
                     </aside>
