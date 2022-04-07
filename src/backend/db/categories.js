@@ -13,28 +13,28 @@ import {balls, bats,stumps,gloves} from "assets/images"
     categoryName: "Bats",
     imageSource:bats,
     imageAlt:"Bats",
-    link:"/ProductList"
+    link:"/products"
   },
   {
     _id: uuid(),
     categoryName: "Balls",
     imageSource:balls,
     imageAlt:"Balls",
-    link:"/ProductList"
+    link:"/products"
   },
   {
     _id: uuid(),
     categoryName: "stumps",
     imageSource:stumps,
     imageAlt:"Stumps",
-    link:"/ProductList"
+    link:"/products"
   },
   {
     _id: uuid(),
     categoryName: "gloves",
     imageSource:gloves,
     imageAlt:"Gloves",
-    link:"/ProductList"
+    link:"/products"
   },
 ];
 
