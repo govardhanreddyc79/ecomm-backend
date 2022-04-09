@@ -10,9 +10,13 @@ export const ProductCard = ({productItem}) => {
             <p>{productName}</p>
             <p>Rs.{price}</p>
         </div>
+        <div className="btn-flex-column">
+            <button 
+            className="btn solid-btn submit btn-width"
+            >Add to Cart</button>
+            <button className="btn solid-btn secondary btn-width">Move to Wishlist</button>
+        </div>
         
-        <button className="btn solid-btn submit btn-width">Move to Cart</button>
-        <button className="btn solid-btn secondary btn-width">Add to Wishlist</button>
         <span className="badge-icon flex-center">
             <i className="fa-solid fa-heart"></i>
         </span>
