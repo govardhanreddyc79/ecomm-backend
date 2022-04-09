@@ -28,6 +28,7 @@ export const filterReducer = (state, action) => {
                         rating: 2
                     }
                 }
+                break;
         case "CATEGORY":
             if (action.categoryValue === "Bats"){
                 return {
@@ -61,14 +62,14 @@ export const filterReducer = (state, action) => {
                         gloves: !state.categories.gloves
                     }
                 }}
+            break;
         case "PRICERANGE":
-            console.log(action.priceValue)
             return {
                 ...state,
                 price: action.priceValue
             };
                    
         default:
-            return state;
+            throw new Error("Action type not found");
     }
 }
