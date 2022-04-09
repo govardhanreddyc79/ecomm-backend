@@ -6,13 +6,11 @@ export const filterReducer = (state, action) => {
                 ...state,
                 sortBy: action.type
             };
-            break;
         case "HIGH_TO_LOW":
             return {
                 ...state,
                 sortBy: action.type
             };
-            break;
         case "RATING":
                 if (action.ratingValue === "4"){
                     return {
@@ -30,7 +28,6 @@ export const filterReducer = (state, action) => {
                         rating: 2
                     }
                 }
-                break;
         case "CATEGORY":
             if (action.categoryValue === "Bats"){
                 return {
@@ -64,14 +61,12 @@ export const filterReducer = (state, action) => {
                         gloves: !state.categories.gloves
                     }
                 }}
-                break;
         case "PRICERANGE":
             console.log(action.priceValue)
             return {
                 ...state,
                 price: action.priceValue
             };
-            break;
                    
         default:
             return state;
