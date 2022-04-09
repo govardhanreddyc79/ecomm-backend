@@ -1,7 +1,7 @@
 export const Navbar = () => {
     return(
         <nav className="nav space-around">
-          <div>
+          <div> 
               <a className="nav-header" href="#">The Sports Adda</a>
           </div>
           <div>

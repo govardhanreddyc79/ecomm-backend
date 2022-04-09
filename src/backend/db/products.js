@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import {bat1, bat2, ball1, ball2, glove1, glove2} from "assets/images"
+import {bat1, bat2, ball1, ball2, glove1, glove2, pad1, pad2} from "assets/images"
 
 /**
  * Product Database can be added here.
@@ -9,21 +9,21 @@ import {bat1, bat2, ball1, ball2, glove1, glove2} from "assets/images"
 export const products = [
   {
     _id: uuid(),
-    category: "Bats",
+    categoryName: "Bats",
     productName:"MRF Bat",
     imageSource:bat1,
     imageAlt:"MRF",
-    price:1800,
+    price:1850,
     rating:4,
     quantity:0,
   },
   {
     _id: uuid(),
-    category: "Bats",
+    categoryName: "Bats",
     productName:"CEAT Bat",
     imageSource:bat2,
     imageAlt:"CEAT",
-    price:1200,
+    price:1275,
     rating:3,
     quantity:0,
   },
@@ -43,7 +43,7 @@ export const products = [
     productName:"PINK Ball",
     imageSource:ball2,
     imageAlt:"PINK",
-    price:800,
+    price:850,
     rating:2,
     quantity:0,
   },
@@ -63,8 +63,28 @@ export const products = [
     productName:"SPARTAN Gloves",
     imageSource:glove2,
     imageAlt:"SPARTAN",
-    price:700,
-    rating:1,
+    price:200,
+    rating:2,
     quantity:0,
   },
+  {
+    _id: uuid(),
+    categoryName: "Pads",
+    productName:"ADIDAS Pads",
+    imageSource:pad1,
+    imageAlt:"ADIDAS",
+    price:550,
+    rating:4,
+    quantity:0,
+  },
+  {
+    _id: uuid(),
+    categoryName: "Pads",
+    productName:"SPARTAN Pads",
+    imageSource:pad2,
+    imageAlt:"SPARTAN",
+    price:850,
+    rating:2,
+    quantity:0,
+  }
 ];
