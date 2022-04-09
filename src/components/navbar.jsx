@@ -2,7 +2,7 @@ export const Navbar = () => {
     return(
         <nav className="nav space-around">
           <div> 
-              <a className="nav-header" href="#">The Sports Adda</a>
+              <a className="nav-header" href="/">The Sports Adda</a>
           </div>
           <div>
               <input type="text" placeholder="Find here" className="search" />

@@ -8,7 +8,7 @@ export const newDeals = [
       dealName: "Pads",
       imageSource:pads,
       imageAlt:"Pads",
-      link:"/ProductList",
+      link:"/products",
       discount:70
     },
     {
@@ -16,7 +16,7 @@ export const newDeals = [
       dealName: "Helmet",
       imageSource:helmet,
       imageAlt:"Helmet",
-      link:"/ProductList",
+      link:"/products",
       discount:50
     },
 ]

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const NewDealsCard = ({dealItem}) => {
     const {dealName, imageSource, imageAlt, link, discount} = dealItem
     return(
@@ -5,8 +7,8 @@ export const NewDealsCard = ({dealItem}) => {
         <img className ="deal-image" src={imageSource} alt={imageAlt}/>
         <div>
             <h3>Available at {discount}% OFF</h3>
-            <a className = "cat-item margin-top" href="./ProductListing/productListing.html" target="_blank">
-                <i className="fa-solid fa-share"></i> {dealName} </a>
+            <Link className = "cat-item margin-top" to={link}>
+                <i className="fa-solid fa-share"></i> {dealName} </Link>
         </div>    
 
     </div>
