@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, ProductCard } from "components";
 import { useFilterReducer } from "context/filter-context";
-import { filterProductsByCategory, sortProductsByPrice, filterProductsByRating } from "utils";
+import { filterProductsByCategory, sortProductsByPrice, filterProductsByRating, filterProductsByPrice } from "utils";
 import axios from "axios";
 import  "./products.css"
 
@@ -11,7 +11,6 @@ export const Products = () => {
     const { state, dispatch } = useFilterReducer();
     const { sortBy, rating, categories, price } = state
     const { bats, balls, pads, gloves } = categories
-    console.log(price)
 
     useEffect(() => {
         (async function () {
@@ -23,11 +22,9 @@ export const Products = () => {
         })()
     }, [])
 
-    const filterByPrice = (priceRange, items) => {
-        return [...items].filter((item) => item.price <= priceRange)
-    }
 
-    const priceFilteredProducts = filterByPrice( price, products)
+    const priceFilteredProducts = filterProductsByPrice( price, products)
+
     const sortedProducts = sortProductsByPrice( sortBy, priceFilteredProducts)
 
     const ratedProducts = filterProductsByRating( rating , sortedProducts)

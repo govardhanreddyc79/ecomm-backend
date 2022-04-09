@@ -1,5 +1,4 @@
 export const filterReducer = (state, action) => {
-    // console.log(action.type, action.priceValue)
     switch(action.type){
         case "LOW_TO_HIGH":
             return {

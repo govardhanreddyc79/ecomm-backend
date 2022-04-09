@@ -1,5 +1,6 @@
 import { filterProductsByCategory } from "./filterProductsByCategory";
 import { sortProductsByPrice } from "./sortProductsByPrice";
-import { filterProductsByRating } from "./filterProductsByRating"
+import { filterProductsByRating } from "./filterProductsByRating";
+import { filterProductsByPrice } from "./filterProductsByPrice";
 
-export {filterProductsByCategory, sortProductsByPrice, filterProductsByRating};
+export {filterProductsByCategory, sortProductsByPrice, filterProductsByRating, filterProductsByPrice};
