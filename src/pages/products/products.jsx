@@ -7,7 +7,6 @@ import  "./products.css"
 
 export const Products = () => {
     const [ products, setProducts] = useState([])
-    const [cartProducts, setCartProducts ] = useState([])
 
     const { state, dispatch } = useFilterReducer();
     const { sortBy, rating, categories, price } = state

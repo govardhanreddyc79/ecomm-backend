@@ -15,7 +15,7 @@ export const cartReducer = ( state = initialState, {type, payload}) => {
             return {
                 ...state,
                 cartProducts : 
-                    [...state.cartProducts.filter(item => item._id != payload._id)],
+                    [...state.cartProducts.filter(item => item._id !== payload._id)],
                 cartProductsCount:state.cartProductsCount - 1,
                 totalPrice: state.totalPrice - (payload.price*payload.quantity)
             }

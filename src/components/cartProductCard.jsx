@@ -3,7 +3,7 @@ export const CartProductCard = ({cartProduct}) => {
     console.log(cartProduct.quantity)
     const {productName, imageSource, imageAlt, price, quantity } = cartProduct;
 
-    const { cartState, cartDispatch } = useCart();
+    const { cartDispatch } = useCart();
     
     return (
     

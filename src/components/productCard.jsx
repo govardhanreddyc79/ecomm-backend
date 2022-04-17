@@ -1,6 +1,5 @@
 import { useCart } from "context/cart-context"
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.production.min";
 
 export const ProductCard = ({productItem}) => {
     
