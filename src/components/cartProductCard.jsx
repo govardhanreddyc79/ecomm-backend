@@ -21,14 +21,14 @@ export const CartProductCard = ({cartProduct}) => {
                     <div className="quantity">
                         
                             <label htmlFor="quantity" >Quantity : 
-                            { cartProduct.quantity != 1 ?
+                            { cartProduct.quantity !== 1 ?
                                 (<button onClick={() => cartDispatch({type:"DECREASE_QUANTITY",payload:cartProduct})}>-</button>)
                                 :
                                 (<button>-</button>)
                                 }
                             <span> {quantity} </span>
 
-                            { cartProduct.quantity != 0 ?
+                            { cartProduct.quantity !== 0 ?
                             (<button onClick={() => cartDispatch({type:"INCREASE_QUANTITY",payload:cartProduct})}>+</button>)
                             :
                             (<button>+</button>)
