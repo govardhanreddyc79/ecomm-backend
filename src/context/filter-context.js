@@ -7,7 +7,7 @@ const useFilterReducer = () => useContext(FilterContext)
 
 const FilterProvider = ({children}) => {
 
-    const [ state, dispatch] = useReducer(filterReducer,{
+    const [ state, dispatch ] = useReducer(filterReducer,{
         sortBy :"",
         rating: 0,
         categories: {bats:false, balls:false, pads:false, gloves:false},

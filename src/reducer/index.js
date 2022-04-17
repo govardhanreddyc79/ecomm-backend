@@ -1,3 +1,4 @@
 import { filterReducer } from "./filterReducer";
+import { cartReducer } from "./cartReducer";
 
-export { filterReducer }
+export { filterReducer, cartReducer }

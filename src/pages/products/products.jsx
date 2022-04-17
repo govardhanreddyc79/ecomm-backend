@@ -7,6 +7,7 @@ import  "./products.css"
 
 export const Products = () => {
     const [ products, setProducts] = useState([])
+    const [cartProducts, setCartProducts ] = useState([])
 
     const { state, dispatch } = useFilterReducer();
     const { sortBy, rating, categories, price } = state
@@ -183,7 +184,10 @@ return(
                 {
                     categorisedProducts?.map((product) => {
                         return (
-                            <ProductCard key = {product._id} productItem={product} />
+                            <ProductCard 
+                            key = {product._id}
+                            productItem={product} 
+                            />
                         )
                     })
                 }
