@@ -6,3 +6,6 @@
 .margin-top {
   margin: 1rem 0rem;
 }
+* {
+  font-family: 'Times New Roman', Times, serif;
+}

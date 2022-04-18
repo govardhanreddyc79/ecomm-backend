@@ -23,11 +23,9 @@
 .element-spacing {
     gap:8px
 }
-.btn-width {
-    width: 65%;
-}
-.btn-flex-column {
+
+.link-div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }

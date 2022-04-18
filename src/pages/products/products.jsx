@@ -183,7 +183,10 @@ return(
                 {
                     categorisedProducts?.map((product) => {
                         return (
-                            <ProductCard key = {product._id} productItem={product} />
+                            <ProductCard 
+                            key = {product._id}
+                            productItem={product} 
+                            />
                         )
                     })
                 }
