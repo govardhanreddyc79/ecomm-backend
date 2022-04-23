@@ -1,4 +1,5 @@
-import { FilterProvider } from "./filter-context";
-import { CartProvider } from "./cart-context";
+import { useFilter, FilterProvider } from "./filter-context";
+import { useCart, CartProvider } from "./cart-context";
+import { useWishlist, WishlistProvider} from "./wishlist-context"
 
-export { FilterProvider, CartProvider};
+export { useFilter,FilterProvider, useCart, CartProvider, useWishlist, WishlistProvider};

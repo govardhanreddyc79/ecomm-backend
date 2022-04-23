@@ -1,5 +1,5 @@
 const initialState = {cartProducts:[], cartProductsCount:0}
-
+    
 export const cartReducer = ( state = initialState, {type, payload}) => {
     
     switch(type){
