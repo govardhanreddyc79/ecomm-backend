@@ -5,14 +5,25 @@ import "./wishlist.css";
 
 
 export const Wishlist = () => {
-    const { wishlistState } = useWishlist();
+    const { wishlistState, wishlistDispatch } = useWishlist();
     const { wishlistProducts, wishlistProductsCount} = wishlistState;
 
     return (
         <div>
             <Navbar />
-
-            <main class="cart">
+            <main className="wishlist-container">
+            
+                {
+                    wishlistProductsCount > 0 && 
+                    <div className="clear-wishlist">
+                        <button className="btn solid-btn danger btn-width"
+                        onClick={() => wishlistDispatch({type:"CLEAR_WISHLIST"})}
+                        >Clear Wishlist</button>
+                    </div>
+                    
+                }
+                
+            <div className="cart">
                 <div className="wishlist-cards">
                 {
                     wishlistProductsCount > 0 ?
@@ -32,7 +43,9 @@ export const Wishlist = () => {
                 </div>
 
                 
-            </main> 
+            </div> 
+
+            </main>
         </div>
     )
 }

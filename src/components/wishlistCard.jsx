@@ -1,12 +1,14 @@
-import { useWishlist } from "context";
+import { useWishlist, useCart } from "context";
 import { Link } from "react-router-dom";
 
 export const WishlistCard = ({productItem}) => {
     
     const { wishlistDispatch } =useWishlist();
+    const { cartState, cartDispatch } = useCart();
+    const { cartProducts } = cartState;
 
  
-    const {productName, price, imageSource, imageAlt} = productItem
+    const {productName, price, imageSource, imageAlt, _id} = productItem
     return(
         <div className="flex-coloumn product product-card">
         <div className="product-image-div">
@@ -17,9 +19,18 @@ export const WishlistCard = ({productItem}) => {
             <p>Rs.{price}</p>
         </div>
         <div className="link-div flex-coloumn">
-            <Link to="/cart" ><button 
-            className="btn solid-btn submit"
-            >Go to Cart</button></Link>
+            {
+            cartProducts?.some(item => item._id === _id) ?
+                (<Link to="/cart" ><button 
+                className="btn solid-btn submit"
+                >Go to Cart</button></Link>)
+                :
+                (<button 
+                    className="btn solid-btn submit"
+                    onClick={() => cartDispatch({ type: "ADD_TO_CART", payload:productItem})}
+                    >Move to Cart</button>)
+            }
+           
         </div>
         
         <span className="badge-icon flex-center">

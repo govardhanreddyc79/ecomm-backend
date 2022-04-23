@@ -19,6 +19,12 @@ export const wishlistReducer = ( state = initialState, {type, payload}) => {
                 [...state.wishlistProducts.filter(item => item._id !== payload._id)],
                 wishlistProductsCount: state.wishlistProductsCount - 1
             }
+        case "CLEAR_WISHLIST":
+            return {
+                ...state,
+                wishlistProducts:[],
+                wishlistProductsCount: 0
+            }
         default:
             throw new Error("Action Not Found in Wishlist Reducer")
     }
