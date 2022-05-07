@@ -1,10 +1,13 @@
-import { useCart } from "context/cart-context";
+import { Link } from "react-router-dom";
+import { useCart, useWishlist } from "../context";
+
 export const CartProductCard = ({cartProduct}) => {
-    console.log(cartProduct.quantity)
-    const {productName, imageSource, imageAlt, price, quantity } = cartProduct;
+    const {productName, imageSource, imageAlt, price, quantity, _id} = cartProduct;
 
     const { cartDispatch } = useCart();
-    
+    const { wishlistState, wishlistDispatch } = useWishlist();
+    const { wishlistProducts, wishlistProductsCount } = wishlistState;
+    console.log(wishlistProducts, wishlistProductsCount)
     return (
     
             <div className="flex-row product-container">
@@ -40,9 +43,21 @@ export const CartProductCard = ({cartProduct}) => {
                     <button className="btn solid-btn submit btn-width"
                     onClick={() => cartDispatch({type:"REMOVE_FROM_CART",payload:cartProduct})}
                     >Remove From Cart</button>
-                    <button className="btn solid-btn secondary btn-width"
-                    onClick={() => cartDispatch({type:"MOVE_TO_WISHLIST",payload:cartProduct})}
-                    >Move to Wishlist</button>
+
+                    {
+                        wishlistProducts?.some(item => item._id === _id) && wishlistProductsCount > 0 ?
+                        (<Link to="/wishlist"><button className="btn solid-btn secondary btn-width">Go to Wishlist</button></Link>)
+                        
+                        :
+
+                        (
+                        <button className="btn solid-btn secondary btn-width"
+                        onClick={() => wishlistDispatch({type:"MOVE_TO_WISHLIST",payload:cartProduct})}
+                        >Move to Wishlist</button>
+                        )
+
+                    }
+                    
 
                 </div>
             </div>

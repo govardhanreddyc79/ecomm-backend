@@ -3,7 +3,7 @@ import { filterReducer } from "reducer";
 
 const FilterContext = createContext();
 
-const useFilterReducer = () => useContext(FilterContext)
+const useFilter = () => useContext(FilterContext)
 
 const FilterProvider = ({children}) => {
 
@@ -23,4 +23,4 @@ const FilterProvider = ({children}) => {
 }
 
 
-export { FilterProvider, useFilterReducer}
+export { FilterProvider, useFilter}

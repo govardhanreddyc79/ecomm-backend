@@ -16,9 +16,9 @@ export const Navbar = () => {
               <Link className="nav-item" to="/cart">
                   <i className="nav-icon fa-solid fa-cart-shopping" /></Link>
               
-              <a className="nav-item" href="./Wishlist/wishlist.html">
-                  <i className="nav-icon fa-solid fa-heart"></i>
-              </a>
+              <Link className="nav-item" to="/wishlist">
+                  <i className="nav-icon fa-solid fa-heart" /></Link>
+              
           </div>
         </nav>
     )
