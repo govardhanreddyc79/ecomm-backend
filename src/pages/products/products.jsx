@@ -41,10 +41,10 @@ return(
             <div className="filter">
                 <aside className="flex-column">
                     <div className="flex-row space-between">
-                        <h3>Filters</h3>
-                        <a href="/" className="clear">Clear</a>
+                        <h3 className="filter-segment">Filters</h3>
+                        <span onChange={() => dispatch({type:"CLEAR"})} className="filter-clear">Clear</span>
                     </div>
-                    <h3 className="margin-top">Price</h3>
+                    <h3 className="margin-top filter-segment">Price</h3>
                     <div className="space-between">
                         <span>200</span>
                         <span>1000</span>
@@ -64,10 +64,11 @@ return(
                         />
                         </label>
 
-                    <h3 className="margin-top">Category</h3>
+                    <h3 className="margin-top filter-segment">Category</h3>
                     <div className="flex-column element-spacing">
-                        <label>
+                        <label className="category-labels">
                             <input 
+                            className="margin-r"
                             type="checkbox" 
                             name="Bats"
                             id="bats"
@@ -77,8 +78,9 @@ return(
                             Bats
                             </label>
                         
-                        <label>
+                        <label className="category-labels">
                             <input 
+                            className="margin-r"
                             type="checkbox" 
                             name="Balls"
                             id="balls"
@@ -88,8 +90,9 @@ return(
                             Balls
                             </label>
                         
-                        <label>
+                        <label className="category-labels">
                             <input 
+                            className="margin-r"
                             type="checkbox" 
                             name="Pads" 
                             id="pads"
@@ -99,8 +102,9 @@ return(
                             Pads
                             </label>
                         
-                        <label>
+                        <label className="category-labels">
                             <input 
+                            className="margin-r"
                             type="checkbox" 
                             name="Gloves" 
                             id="gloves"
@@ -111,11 +115,12 @@ return(
                             </label>
                     </div>
                     
-                    <h3 className="margin-top">Rating</h3>
+                    <h3 className="margin-top filter-segment">Rating</h3>
                     <div className="flex-column element-spacing">
                         
-                    <label htmlFor="rating-4">
+                    <label htmlFor="rating-4" className="category-labels">
                         <input 
+                        className="margin-r"
                         type="radio"
                         name="rating"
                         value="4" 
@@ -123,11 +128,12 @@ return(
                         checked = {rating === 4}
                         onChange = {() => dispatch({ type:"RATING", ratingValue:"4"})} 
                         />
-                        4 star and above
+                        4 Star and above
                         </label>
                     
-                    <label htmlFor="rating-3">
+                    <label htmlFor="rating-3" className="category-labels">
                         <input 
+                        className="margin-r"
                         type="radio" 
                         name="rating" 
                         value="3" 
@@ -135,11 +141,12 @@ return(
                         checked = {rating === 3}
                         onChange = {() => dispatch({ type:"RATING", ratingValue:"3"})} 
                         />
-                        3 star and above
+                        3 Star and above
                         </label>
                     
-                    <label htmlFor="rating-2">
+                    <label htmlFor="rating-2" className="category-labels">
                         <input 
+                        className="margin-r"
                         type="radio" 
                         name="rating" 
                         value="2" 
@@ -147,28 +154,30 @@ return(
                         checked = {rating === 2}
                         onChange = {() => dispatch({ type:"RATING", ratingValue:"2"})}
                         />
-                        2 star and above
+                        2 Star and above
                         </label>
                     </div>
                     
-                    <h3 className="margin-top">Sort By</h3>
+                    <h3 className="margin-top filter-segment">Sort By</h3>
                     <div className="flex-column element-spacing">
                         
-                    <label>
+                    <label className="category-labels">
                         <input
                          type="radio" 
                          name="sort-by" 
                          id="low-to-high"
+                         className="margin-r"
                          checked={sortBy === "LOW_TO_HIGH"}
                          onChange = {() => dispatch({ type: "LOW_TO_HIGH" })}
                          />
                          Price - Low to High
                          </label>
-                    <label>
+                    <label className="category-labels">
                         <input
                         type="radio"
                         name="sort-by" 
                         id="high-to-low"
+                        className="margin-r"
                         checked={sortBy === "HIGH_TO_LOW"}
                         onChange = {() => dispatch({ type: "HIGH_TO_LOW" })}
                         />
