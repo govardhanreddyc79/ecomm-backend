@@ -42,7 +42,7 @@ return(
                 <aside className="flex-column">
                     <div className="flex-row space-between">
                         <h3 className="filter-segment">Filters</h3>
-                        <span onChange={() => dispatch({type:"CLEAR"})} className="filter-clear">Clear</span>
+                        <span onClick={() => dispatch({type:"CLEAR"})} className="filter-clear">Clear</span>
                     </div>
                     <h3 className="margin-top filter-segment">Price</h3>
                     <div className="space-between">
@@ -60,6 +60,7 @@ return(
                         min="200"
                         max="2000"
                         step="200"
+                        value={price}
                         onChange={(e) => dispatch({type:"PRICERANGE",priceValue:e.target.value})}
                         />
                         </label>

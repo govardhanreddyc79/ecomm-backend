@@ -73,7 +73,7 @@ export const filterReducer = (state, action) => {
                 sortBy :"",
                 rating: 0,
                 categories: {bats:false, balls:false, pads:false, gloves:false},
-                price:200
+                price:2000
             };
                    
         default:
