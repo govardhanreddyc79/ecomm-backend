@@ -1,8 +1,9 @@
-import { useCart } from "context/cart-context"
+import { useCart, useWishlist } from "../context";
 import { Link } from "react-router-dom";
 
 export const ProductCard = ({productItem}) => {
     
+    const {wishlistDispatch} = useWishlist();
     const { cartState, cartDispatch } = useCart();
     const { cartProducts, cartProductsCount } = cartState;
 
@@ -38,12 +39,10 @@ export const ProductCard = ({productItem}) => {
 
         </div>
         <span className="wishlist-icon flex-center">
-            <i className="fa-solid fa-heart"></i>
+            <i onClick={() => wishlistDispatch({ type: "MOVE_TO_WISHLIST", payload:productItem})}
+            className="fa-solid fa-heart"></i>
         </span>
-      
-       
-        
-        
+     
     </div>
     )
 }

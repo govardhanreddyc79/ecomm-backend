@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, ProductCard } from "components";
-import { useFilterReducer } from "context/filter-context";
+import { useFilter } from "context/filter-context";
 import { filterProductsByCategory, sortProductsByPrice, filterProductsByRating, filterProductsByPrice } from "utils";
 import axios from "axios";
 import  "./products.css"
@@ -8,7 +8,7 @@ import  "./products.css"
 export const Products = () => {
     const [ products, setProducts] = useState([])
 
-    const { state, dispatch } = useFilterReducer();
+    const { state, dispatch } = useFilter();
     const { sortBy, rating, categories, price } = state
     const { bats, balls, pads, gloves } = categories
 

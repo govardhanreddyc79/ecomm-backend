@@ -12,11 +12,10 @@ export const Cart = () => {
         <div>
         <Navbar />
 
-        <main class="cart">
+        <main className="cart">
             <div className="flex-column column-gap">
             {
                 cartProducts?.map((product) => {
-                    console.log(product)
                     return (
                         <CartProductCard cartProduct = {product}/>
                     )
@@ -24,7 +23,6 @@ export const Cart = () => {
             }
             
             </div>
-            {console.log(cartProducts, totalPrice)}
             { cartProducts.length > 0 ?
                 (<div className="price-details">
                     <h3>PRICE DETAILS</h3>
