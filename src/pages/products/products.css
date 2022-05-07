@@ -57,6 +57,10 @@
     padding: 0.5rem;
     color: var(--primary-color);
     background-color: var(--bg-clr);
+    cursor: pointer;
+}
+.wishlist-icon:hover {
+    font-size: 1.5rem;
 }
 .margin-r {
     margin-right: 0.5rem;

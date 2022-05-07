@@ -11,7 +11,7 @@ export const Navbar = () => {
           </div>
           <div className="nav-links margin-left">
              <a href="./Authentication/login.html">
-              <button className="btn solid-btn submit">Login</button>  
+              <button className="btn solid-btn submit-btn">Login</button>  
           </a>
               <Link className="nav-item" to="/cart">
                   <i className="nav-icon fa-solid fa-cart-shopping" /></Link>
