@@ -67,6 +67,14 @@ export const filterReducer = (state, action) => {
                 ...state,
                 price: action.priceValue
             };
+        case "CLEAR":
+            return {
+                ...state,
+                sortBy :"",
+                rating: 0,
+                categories: {bats:false, balls:false, pads:false, gloves:false},
+                price:200
+            };
                    
         default:
             throw new Error("Action type not found");
