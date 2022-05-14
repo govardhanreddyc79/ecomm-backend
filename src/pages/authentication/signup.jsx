@@ -108,7 +108,10 @@ export const Signup = () => {
 
                         { confirmPassword.length > 0 && password !== confirmPassword && (
                             <span className="error-msg"> password not matching !!!</span>
+                            
                         )}
+
+                        { error && <p className="error-msg">{error}</p>}
                         
                         <button type="submit" className="btn solid-btn submit-btn login-btn">Create new account</button>
 
