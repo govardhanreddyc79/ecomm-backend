@@ -1,0 +1,58 @@
+.login-header {
+    text-align: center;
+    font-size: 2rem;
+}
+.login-div {
+    gap:1rem;
+    width: 30rem;
+    border-radius: 1rem;
+    border: 2px solid var(--primary-color);
+    padding: 2rem 3rem ;
+}
+.signup-div {
+    gap:1rem;
+    width: 38rem;
+    border-radius: 1rem;
+    border: 2px solid var(--primary-color);
+    padding: 1rem ;
+}
+.login-labels {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+}
+.input-box {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    height: 3rem;
+    border: 1px solid var(--primary-color);
+    font-size: 1.3rem;
+}
+.login-btn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+
+}
+.credentials-div {
+    margin: 1.5rem 0rem;
+    position: relative;
+}
+.new-user {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.login-margin-l{
+    margin-left: 1.5rem;
+}
+.error-msg {
+    color: var(--danger-clr);
+}
+.password-icon {
+    position:absolute;
+    top: 50%;
+    right: 5%;
+}
