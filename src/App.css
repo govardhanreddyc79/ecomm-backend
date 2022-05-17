@@ -9,3 +9,18 @@
 * {
   font-family: 'Times New Roman', Times, serif;
 }
+.nav-item-count {
+  position: absolute;
+  top:-0.8rem;
+  right:-0.6rem;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  color: var(--white-clr);
+  font-size: 1rem;
+  padding: 0.2rem;
+  width: 1.5rem;
+  text-align: center;
+}
+.nav-item {
+  position: relative;
+}
