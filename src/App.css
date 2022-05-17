@@ -8,6 +8,8 @@
 }
 * {
   font-family: 'Times New Roman', Times, serif;
+  --primary-btn-hover-color:  tomato;
+  --secondary-btn-hover-color:  #363e66;
 }
 .nav-item-count {
   position: absolute;
@@ -23,4 +25,7 @@
 }
 .nav-item {
   position: relative;
+}
+.nav-search {
+  font-size: 1.3rem;
 }

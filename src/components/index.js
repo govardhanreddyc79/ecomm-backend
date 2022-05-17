@@ -4,3 +4,7 @@ export { CategoryCard } from "./categoryCard";
 export { ProductCard } from "./productCard";
 export { CartProductCard } from "./cartProductCard";
 export { WishlistCard} from "./wishlistCard";
+export { Categories } from "./categories";
+export { Rating } from "./rating";
+export { SortBy } from "./sortBy";
+export { Price } from "./priceRange";
