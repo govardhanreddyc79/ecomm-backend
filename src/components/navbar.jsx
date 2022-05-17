@@ -18,7 +18,7 @@ export const Navbar = () => {
               <Link className="nav-header" to="/">The Sports Adda</Link>
           </div>
           <div>
-              <input type="text" placeholder="Find here" className="search" />
+              <input type="text" placeholder="Find here ..." className="search nav-search" />
           </div>
           <div className="nav-links margin-left">
               { token ? (<Link to="/">

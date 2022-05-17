@@ -2,7 +2,7 @@ import { useCart, useWishlist } from "../context";
 import { Link } from "react-router-dom";
 
 export const ProductCard = ({productItem}) => {
-    
+    const token = localStorage.getItem("token");
     const {wishlistDispatch} = useWishlist();
     const { cartState, cartDispatch } = useCart();
     const { cartProducts, cartProductsCount } = cartState;
@@ -23,15 +23,22 @@ export const ProductCard = ({productItem}) => {
             cartProducts.some(item => item._id === _id ) && cartProductsCount > 0 ?
             (<Link to="/cart">
                 <button 
-                className="btn solid-btn submit-btn cart-btn-position"
+                className="btn solid-btn submit-btn cart-btn"
                 >Go to Cart</button></Link>
+            )
+            :
+            token ?  (
+                <button 
+                className="btn solid-btn submit-btn cart-btn"
+                onClick={() => cartDispatch({ type: "ADD_TO_CART", payload:productItem})}
+                >Add to Cart</button>
             )
             :
             (
                 <button 
-                className="btn solid-btn submit-btn cart-btn-position"
+                className="btn solid-btn submit-btn cart-btn"
                 onClick={() => cartDispatch({ type: "ADD_TO_CART", payload:productItem})}
-                >Add to Cart</button>
+                disabled>Add to Cart</button>
             )
             
 

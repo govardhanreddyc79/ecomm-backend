@@ -43,8 +43,14 @@
     flex-direction: row;
     justify-content: center;
 }
-.cart-btn-position {
+.cart-btn {
     position: relative;
+}
+.cart-btn:disabled {
+    cursor:not-allowed;
+}
+.submit-btn:hover{
+    background-color: var(--primary-btn-hover-color);
 }
 .wishlist-icon {
     width: 2rem;
@@ -64,4 +70,7 @@
 }
 .margin-r {
     margin-right: 0.5rem;
+}
+.price-value {
+    font-size: 1.3rem;
 }
