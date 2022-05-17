@@ -16,7 +16,7 @@ export const Wishlist = () => {
                 {
                     wishlistProductsCount > 0 && 
                     <div className="clear-wishlist">
-                        <button className="btn solid-btn danger btn-width"
+                        <button className="btn solid-btn submit-btn btn-width"
                         onClick={() => wishlistDispatch({type:"CLEAR_WISHLIST"})}
                         >Clear Wishlist</button>
                     </div>
