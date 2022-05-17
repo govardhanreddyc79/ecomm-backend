@@ -14,7 +14,7 @@ export const CartProductCard = ({cartProduct}) => {
                 <div className="cart-image-div">
                     <img className="cart-image" src={imageSource} alt={imageAlt}></img>
                 </div>
-                <div className="product-description-cart">
+                <div className="product-description-cart cart-desc-width">
                     <h2>{productName}</h2>
                     <div className="price">
                         <span className="price-bold"> Rs. {price} </span>

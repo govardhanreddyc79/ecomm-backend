@@ -47,7 +47,7 @@ export const Cart = () => {
                     </div>
                     <hr></hr>
                     <p>You will save Rs. {totalPrice} on this order</p>
-                    <button className="btn solid-btn submit btn-width">PLACE ORDER</button>
+                    <button className="btn solid-btn submit-btn btn-width">PLACE ORDER</button>
                     
                 </div> )
                 :
