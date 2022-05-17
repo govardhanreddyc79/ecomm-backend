@@ -22,18 +22,18 @@ export const WishlistCard = ({productItem}) => {
             {
             cartProducts?.some(item => item._id === _id) ?
                 (<Link to="/cart" ><button 
-                className="btn solid-btn submit"
+                className="btn solid-btn submit-btn"
                 >Go to Cart</button></Link>)
                 :
                 (<button 
-                    className="btn solid-btn submit"
+                    className="btn solid-btn submit-btn"
                     onClick={() => cartDispatch({ type: "ADD_TO_CART", payload:productItem})}
                     >Move to Cart</button>)
             }
            
         </div>
         
-        <span className="badge-icon flex-center">
+        <span className="wishlist-icon flex-center">
         <i class="fa-solid fa-circle-xmark"
                 onClick={() => wishlistDispatch({ type: "REMOVE_FROM_WISHLIST", payload:productItem})}
                 >
