@@ -10,7 +10,7 @@ export const Navbar = () => {
     const { wishlistProductsCount } = wishlistState;
 
     const logoutHandler = () => {
-        localStorage.setItem("token","")
+        localStorage.removeItem("token")
     }
     return(
         <nav className="nav space-around">
