@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { useCart, useWishlist } from "../context";
-import "../App.css";
+import { Link, useNavigate} from "react-router-dom";
+import { useCart, useWishlist } from "../../context";
+import "./navbar.css";
 
 export const Navbar = () => {
     const token = localStorage.getItem("token");
@@ -9,17 +9,20 @@ export const Navbar = () => {
     const { cartProductsCount } = cartState;
     const { wishlistProductsCount } = wishlistState;
 
+    const navigate = useNavigate();
+
     const logoutHandler = () => {
-        localStorage.removeItem("token")
+        localStorage.removeItem("token");
+        navigate('/')
     }
     return(
-        <nav className="nav space-around">
+        <nav className="nav space-around nav-pos">
           <div> 
-              <Link className="nav-header" to="/">The Sports Adda</Link>
+              <Link className="nav-header logo-title" to="/">The Sports Adda</Link>
           </div>
           <div>
               <input type="text" placeholder="Find here ..." className="search nav-search" />
-          </div>
+          </div>    
           <div className="nav-links margin-left">
               { token ? (<Link to="/">
                 <button className="btn solid-btn submit-btn" onClick={logoutHandler}>Logout</button></Link> )

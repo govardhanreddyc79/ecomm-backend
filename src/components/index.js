@@ -1,4 +1,4 @@
-export { Navbar } from "./navbar";
+export { Navbar } from "./Navbar/navbar";
 export { NewDealsCard } from "./newDealsCard";
 export { CategoryCard } from "./categoryCard";
 export { ProductCard } from "./productCard";
@@ -8,3 +8,4 @@ export { Categories } from "./categories";
 export { Rating } from "./rating";
 export { SortBy } from "./sortBy";
 export { Price } from "./priceRange";
+export { Footer} from "./Footer/footer";

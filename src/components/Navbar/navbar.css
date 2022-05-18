@@ -1,0 +1,28 @@
+.nav-item-count {
+    position: absolute;
+    top:-0.8rem;
+    right:-0.6rem;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    color: var(--white-clr);
+    font-size: 1rem;
+    padding: 0.2rem;
+    width: 1.5rem;
+    text-align: center;
+  }
+  .nav-item {
+    position: relative;
+  }
+  .nav-search {
+    font-size: 1.3rem;
+  }
+  .logo-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .nav-pos {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color:var(--nav-bg-color);
+  }
