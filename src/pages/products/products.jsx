@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navbar, ProductCard, Categories, Rating, SortBy, Price, Footer} from "components";
+import { Navbar, ProductCard, Categories, Rating, SortBy, Price} from "components";
 import { useFilter } from "context";
 import { filterProductsByCategory, sortProductsByPrice, filterProductsByRating, filterProductsByPrice } from "utils";
 import axios from "axios";
@@ -68,7 +68,6 @@ return(
             </div>
 
         </main>
-        <Footer />
 
     </div>
 )
