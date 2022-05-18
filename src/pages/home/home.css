@@ -1,0 +1,45 @@
+
+.homepage-bg {
+    background-image: url("../../assets/images/wallpaper.jpg");
+    background-size: auto;
+    background-position: bottom;
+    
+}
+.hp-category {
+    display: flex;
+    flex-flow: row-wrap;
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.category-image {
+    height: 10rem;
+    width:100%;
+    height: 100%;
+    /* border: 2px solid var(--primary-color); */
+    box-shadow: 5px 5px 10px var(--primary-color);
+}
+.category-item-title {
+    position:absolute;
+    top:45%;
+    width: 100%;
+    font-size: 2rem;
+    background-color: var(--white-clr);
+    color: var(--primary-btn-hover-color);
+    text-decoration: none;
+    text-align: center;
+}
+.ecom-banner {
+    width: 90%;
+    height: 45rem;
+    margin: 2rem 0;
+    border-radius: 2rem;
+   justify-self: center;
+
+}
+.homepage-image {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}

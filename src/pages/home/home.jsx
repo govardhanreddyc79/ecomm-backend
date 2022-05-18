@@ -1,10 +1,9 @@
-// import { Navbar } from "/components/navbar";
-import { Navbar, CategoryCard, NewDealsCard,  } from "components";
+import { Navbar, CategoryCard, NewDealsCard, Footer } from "components";
 import axios from "axios";
-import { sportsadda } from "assets/images";
+import { ecombanner } from "assets/images";
 import { useState, useEffect } from "react";
 import { newDeals } from "staticData";
-// import { NewDealsCard } from "/components/newDealsCard";
+import "./home.css";
 
 
 
@@ -23,10 +22,11 @@ export const Home = () => {
 
     
     return (
-      <div>
+      <div className="homepage-bg">
 
         <Navbar />
-  
+        
+
         <main className="flex-column">
           <div className="category-cards">
             
@@ -36,26 +36,25 @@ export const Home = () => {
                 )
             })} 
           </div>
-          
-          <div className="flex-column flex-center margin-top">
-              <h1 className="flex-center margin-top">Welcome to the Sports Adda</h1>
-              <img className="home-logo flex-center" src={sportsadda} alt="Sports Adda Logo"/>
   
-              <h2>Deals of the Day</h2>
-          </div>
-  
-          
-          <div className="category-cards margin">
+          <div className="category-cards">
           { newDeals.map((deal) => {
                 return(
                     <NewDealsCard key = {deal._id} dealItem={deal} />
                 )
             })}
               </div>
-        
+        <div className="flex-row">
+            <div className="ecom-banner">
+                <img className="homepage-image" src={ecombanner} alt="Sports Adda Logo"/>
+            </div>
+          </div>
   
+            
+          <Footer />
           </main>
       
+
       </div>
     );
   }
